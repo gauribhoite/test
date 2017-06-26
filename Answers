@@ -1,23 +1,27 @@
 1. What did you think of the provided acceptance criteria?
+- The given acceptance criteria was short and concise. With the help of team discussion all the details of the implementation can be captured in tickets.
 
 2. If this were a real story from a real life Product Owner - what questions would you ask?
-
 - What is the minimum length of the search term required?
-- How many search results should be displayed in a page? Given that it returns hundreds of search result.
+- How many search results should be displayed on a page? Given that it returns hundreds of search result.
 Pagination is always a good choice for displaying search result.
 - What is the request timeout while fetching the search result? what should be the message displayed if the given timeout is exceeded?
 - How should the search results be ordered? Is it be the most popular product or by most relevant? D we want to give user an option to choose?
 
 
 3. Why did you choose to structure your code in the way you did?
+- Within the api tests I chose to write BDD scenarios for the given acceptance criteria. Having step definitons separate within the steps directory
+I like to keep the helper functions in separate util.py file and setup of the tests as defined in the behave documentation in environment file.
+- For the selenium tests I chose to write the tests using page object model because that helps in maintaining the code as the locators might be changing frequently.
 
 4. If you had more time what improvements would you make to your code?
+- Running them parallely
 
 5. What is your usual approach to testing on a project?
 - Setup the framework (if it has not been set yet)
 - After reading the acceptance criteria I write down feature file according to it. This gives me an idea of how it fits into the current flow.
 - Write down test cases.
 - Ensure api tests cover the search functionality
-- UI tests should cover the if the search icon is displayed and search input field and the results displayed int he table format
+- UI tests should cover all the user flow eg:the if the search icon is displayed and is clickable
 
 
